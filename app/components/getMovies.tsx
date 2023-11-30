@@ -17,7 +17,6 @@ export default function Home() {
       setMovies(movies)
       console.log({movies});
       console.log({NEXT_PUBLIC_IMAGE_BASE_URL});
-      
     })()
   },[])
   return (
@@ -30,9 +29,7 @@ export default function Home() {
           </div>
         </Link>
       ))}
-    
     </div>
-
    </main>
   )
 }

@@ -1,5 +1,4 @@
 import { Result } from "postcss"
-
 export const getMovies=async ()=>{
     const url='/api/get-movies'
     const response=await fetch (url)

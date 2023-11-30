@@ -1,7 +1,6 @@
 import { BASE_URL,ACCESS_TOKEN } from "@/app/config";
 import { error } from "console";
 import { apiFetch } from "../utils/apiFetch";
-
 export async function GET(){
     try{
         const response=await fetch(`${BASE_URL}/3/movie/popular`,{
@@ -12,13 +11,10 @@ export async function GET(){
         })
         const result=await response.json()
         return new Response(JSON.stringify(
-            
         result),{
             status:200,
             statusText:'Success'
-
         })
-
     }catch(error:any){
         return new Response(error.message,{
             status:500,

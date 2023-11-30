@@ -1,6 +1,5 @@
 import { BASE_URL,ACCESS_TOKEN } from "@/app/config";
 import { METHODS } from "http";
-
 export async function GET(_request:Request,{params}:{params:{movie_id:number}}){
     const movie_id=params.movie_id
     try{
@@ -8,7 +7,7 @@ export async function GET(_request:Request,{params}:{params:{movie_id:number}}){
             return new Response('Movie base url not found',{
                 status:404,
                 statusText:"failed",
-            }) 
+            })
         }
         if(!ACCESS_TOKEN){
             return new Response('Movie access token not found',{
